@@ -96,13 +96,30 @@ const Data = {
                 level: "0"
             }],
     },
-    social: {
-        facebook: "https://www.facebook.com/azat.rahmanov",
-        twitter: "https://twitter.com/azat_rahmanov",
-        github: ""
-    },
+    social: [
+        {
+            name: "Personal Blog",
+            url: "https://blog.rahmanow.com",
+            icon: "../img/blog.png"
+        },
+        {
+            name: "Instagram",
+            url: "https://www.instagram.com/azadik",
+            icon: "../img/instagram.png"
+        },
+        {
+            name: "Twitter",
+            url: "https://twitter.com/Azadik",
+            icon: "../img/twitter.png"
+        },
+        {
+            name: "GiHub",
+            url: "https://github.com/rahmanow",
+            icon: "../img/github.png"
+        }
+    ],
     footer: {
-        copyright: 'Copyright © 2019-2020',
+        copyright: '© 2022 Charwa.biz',
     },
 }
 
