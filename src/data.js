@@ -5,10 +5,10 @@ const Data = {
         surname: "rahmanov"
     },
     content: {
-        description: "simplifying the creation of web pages, cms maintenance, templating and much more!",
+        description: "Experienced front-end developer with five years of industry experience, skilled in JavaScript, ReactJS, and TailwindCSS. Proven ability to develop high-quality, responsive, and efficient web applications. Committed to using Agile methodologies to optimize design, functionality, and user experience.",
         skills: [
             {
-                name: "HTML",
+                name: "HTML5",
                 level: "5"
             },
             {
@@ -20,12 +20,16 @@ const Data = {
                 level: "5"
             },
             {
+                name: "Tailwind CSS",
+                level: "5"
+            },
+            {
                 name: "React",
-                level: "2"
+                level: "4"
             },
             {
                 name: "Node.js",
-                level: "2"
+                level: "1"
             },
             {
                 name: "PHP",
@@ -48,12 +52,12 @@ const Data = {
                 level: "5"
             },
             {
-                name: "Webpack",
-                level: "0"
+                name: "Figma",
+                level: "5"
             },
             {
-                name: "Bower",
-                level: "0"
+                name: "Gulp JS",
+                level: "5"
             },
             {
                 name: "SASS",
@@ -66,6 +70,10 @@ const Data = {
             {
                 name: "WordPress",
                 level: "4"
+            },
+            {
+                name: "Prestashop",
+                level: "5"
             },
             {
                 name: "Joomla",
@@ -81,7 +89,7 @@ const Data = {
             },
             {
                 name: "SEO",
-                level: "5"
+                level: "0"
             },
             {
                 name: "Web Design",
@@ -119,8 +127,8 @@ const Data = {
         }
     ],
     footer: {
-        copyright: '© 2022 Charwa.biz',
-    },
+        copyright: `© ${new Date().getFullYear()} Charwa.biz`
+        },
 }
 
 export default Data;
