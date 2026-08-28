@@ -8,5 +8,20 @@
   "assets": {
     "directory": "./build",
     "not_found_handling": "single-page-application"
-  }
+  },
+  // Bind the apex domain here rather than only in the Cloudflare dashboard, so
+  // the domain the site actually serves from is reviewable and travels with the
+  // repository. custom_domain (rather than a bare route pattern) is what makes
+  // Cloudflare manage the DNS record and the certificate; a route pattern would
+  // instead require a proxied DNS record to already exist.
+  //
+  // This must match the canonical URL declared in public/index.html. Add
+  // "www.rahmanow.com" as a second entry only once that hostname is set up in
+  // the zone, since deploying a custom domain the zone cannot satisfy fails.
+  "routes": [
+    {
+      "pattern": "rahmanow.com",
+      "custom_domain": true
+    }
+  ]
 }
