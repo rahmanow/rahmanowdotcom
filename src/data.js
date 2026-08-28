@@ -127,7 +127,7 @@ const Data = {
         }
     ],
     footer: {
-        copyright: `© ${new Date().getFullYear()} Charwa.biz`
+        copyright: `© ${new Date().getFullYear()} rahmanow.com`
         },
 }
 

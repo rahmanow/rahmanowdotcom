@@ -5,13 +5,17 @@
     {
       "src": "/favicon.png",
       "type": "image/png",
-      "sizes": "554x554"
+      "sizes": "180x180"
     },
     {
-      "src": "/img/azat_avatar.webp",
-      "type": "image/webp",
-      "sizes": "5462x5462",
-      "purpose": "any"
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "/",
