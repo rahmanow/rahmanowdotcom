@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "rahmanowdotcom",
+  "compatibility_date": "2026-08-28",
+  // Assets-only Worker: the CRA build is served straight from the edge, so there
+  // is no `main` script and no ASSETS binding (both are only valid with a Worker
+  // script). Unmatched navigation requests fall back to index.html.
+  "assets": {
+    "directory": "./build",
+    "not_found_handling": "single-page-application"
+  }
+}

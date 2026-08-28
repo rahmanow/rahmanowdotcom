@@ -1,6 +1,6 @@
 const Data = {
     header: {
-        avatar: "../img/azat_avatar.webp",
+        avatar: "/img/azat_avatar.webp",
         name: "azat",
         surname: "rahmanov"
     },
@@ -108,22 +108,22 @@ const Data = {
         {
             name: "Personal Blog",
             url: "https://blog.rahmanow.com",
-            icon: "../img/blog.png"
+            icon: "/img/blog.png"
         },
         {
             name: "Instagram",
             url: "https://www.instagram.com/azadik",
-            icon: "../img/instagram.png"
+            icon: "/img/instagram.png"
         },
         {
             name: "Twitter",
             url: "https://twitter.com/Azadik",
-            icon: "../img/twitter.png"
+            icon: "/img/twitter.png"
         },
         {
-            name: "GiHub",
+            name: "GitHub",
             url: "https://github.com/rahmanow",
-            icon: "../img/github.png"
+            icon: "/img/github.png"
         }
     ],
     footer: {
