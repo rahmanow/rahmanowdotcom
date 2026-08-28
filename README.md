@@ -20,7 +20,9 @@ npm run build    # production build into ./build
 
 Site content (name, bio, skills, social links, footer) lives in `src/data.js`.
 Skills are ordered by `level` and dimmed as the level drops; `level: "0"` hides
-a skill entirely.
+a skill entirely. The dimming bottoms out at `text-gray-500`, the lightest gray
+that still clears WCAG's 4.5:1 contrast minimum on the white page; a test
+asserts this, so lightening the ramp further fails CI.
 
 
 ## Deployment (Cloudflare Workers)

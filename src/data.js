@@ -56,10 +56,6 @@ const Data = {
                 level: "5"
             },
             {
-                name: "Gulp JS",
-                level: "5"
-            },
-            {
                 name: "SASS",
                 level: "4"
             },

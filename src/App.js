@@ -7,13 +7,13 @@ function App() {
     const { header, content, social, footer } = Data;
   return (
     <div className="h-full">
-        <section className="w-full px-6 pb-6 antialiased bg-white">
+        {/* <main> and <footer> give assistive technology landmarks to jump
+            between; the page previously had none. */}
+        <main className="w-full px-6 pb-6 antialiased bg-white">
             <Hero name={header.name} surname={header.surname} avatar={header.avatar} description={content.description} skills={content.skills} />
             <SocialLinks links={social} />
-        </section>
-        <section className="bg-white">
-            <Footer copyright={footer.copyright} />
-        </section>
+        </main>
+        <Footer copyright={footer.copyright} />
     </div>
   );
 }
