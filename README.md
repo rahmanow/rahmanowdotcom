@@ -36,3 +36,22 @@ npm run deploy   # build + wrangler deploy
 
 `wrangler deploy` needs credentials: either run `wrangler login` once, or set
 `CLOUDFLARE_API_TOKEN` (a token with the *Edit Cloudflare Workers* template).
+
+
+## CI
+
+`.github/workflows/ci.yml` runs tests and a build on every push and pull
+request, then deploys to Cloudflare Workers on pushes to `master`. The deploy
+reuses the artifact the test job built, so what ships is what was tested.
+
+It calls the pinned `wrangler` devDependency directly rather than a third-party
+action. To enable deploys, add one repository secret under
+**Settings > Secrets and variables > Actions**:
+
+| Secret | Required | Notes |
+| --- | --- | --- |
+| `CLOUDFLARE_API_TOKEN` | yes | Create from the *Edit Cloudflare Workers* template |
+| `CLOUDFLARE_ACCOUNT_ID` | only if the token can see more than one account | |
+
+Until the token is set, the deploy job fails fast with a message saying so;
+tests and builds still run.
