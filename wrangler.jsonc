@@ -8,5 +8,30 @@
   "assets": {
     "directory": "./build",
     "not_found_handling": "single-page-application"
-  }
+  },
+  // Naming any route flips this to false by default, which once disabled the
+  // workers.dev address in the same deploy that failed to attach the apex and
+  // left the Worker with no reachable target at all. Wrangler does not roll back
+  // partial trigger changes, so state it explicitly: workers.dev stays up as a
+  // fallback and a failed custom domain degrades instead of blacking the site out.
+  "workers_dev": true,
+  // Bind the apex here rather than only in the Cloudflare dashboard, so the
+  // domain the site serves from is reviewable and travels with the repository.
+  // custom_domain is what makes Cloudflare manage the DNS record and the
+  // certificate; a bare route pattern would instead require a proxied record for
+  // the apex to already exist, which is the dependency this removes.
+  //
+  // PRECONDITION: rahmanow.com must have no externally managed A/CNAME records,
+  // or Cloudflare rejects the custom domain (API code 100117) and the deploy
+  // fails. Those records are what serve the domain today, so clearing them is a
+  // cutover to plan, not a formality.
+  //
+  // Matches the canonical URL in public/index.html. Add "www.rahmanow.com" only
+  // once that hostname exists in the zone, for the same reason.
+  "routes": [
+    {
+      "pattern": "rahmanow.com",
+      "custom_domain": true
+    }
+  ]
 }
